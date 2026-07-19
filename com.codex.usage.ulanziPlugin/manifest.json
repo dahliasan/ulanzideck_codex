@@ -1,0 +1,57 @@
+{
+  "UUID": "com.dahliasan.codexusage.plugin",
+  "Name": "Codex Usage",
+  "Description": "Monitor your ChatGPT Codex subscription usage in real time. Shows the 5-hour rolling limit and the weekly limit directly on your Ulanzi Deck button, with color-coded thresholds and reset countdown. Credentials are read from ~/.codex/auth.json — no API key required.",
+  "Author": "dahliasan",
+  "Version": "1.0.0",
+  "Icon": "resources/icon.png",
+  "Category": "Codex",
+  "CategoryIcon": "resources/icon.png",
+  "CodePath": "plugin/app.js",
+  "Type": "JavaScript",
+  "PrivateAPI": true,
+  "SupportedInMultiActions": false,
+  "Actions": [
+    {
+      "Name": "5-hour Limit",
+      "Tooltip": "Codex 5-hour rolling limit usage.",
+      "Icon": "resources/action-5h.png",
+      "PropertyInspectorPath": "property-inspector/inspector.html",
+      "UUID": "com.dahliasan.codexusage.plugin.fivehour",
+      "States": [
+        {
+          "Image": "resources/action-5h.png"
+        }
+      ],
+      "SupportedInMultiActions": false,
+      "Controllers": [
+        "Keypad"
+      ]
+    },
+    {
+      "Name": "Weekly Limit",
+      "Tooltip": "Codex weekly usage limit.",
+      "Icon": "resources/action-7d.png",
+      "PropertyInspectorPath": "property-inspector/inspector.html",
+      "UUID": "com.dahliasan.codexusage.plugin.weekly",
+      "States": [
+        {
+          "Image": "resources/action-7d.png"
+        }
+      ],
+      "SupportedInMultiActions": false,
+      "Controllers": [
+        "Keypad"
+      ]
+    }
+  ],
+  "OS": [
+    {
+      "Platform": "mac",
+      "MinimumVersion": "10.15"
+    }
+  ],
+  "Software": {
+    "MinVersion": "3.0.11"
+  }
+}

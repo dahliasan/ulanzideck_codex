@@ -1,0 +1,16 @@
+{
+  "name": "codex-usage",
+  "version": "1.0.0",
+  "description": "Ulanzi Deck plugin that displays your ChatGPT Codex subscription usage (5-hour rolling and weekly limits) on a button.",
+  "author": "dahliasan",
+  "license": "MIT",
+  "main": "plugin/app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node plugin/app.js",
+    "test": "node --test ../tests/*.test.js"
+  },
+  "dependencies": {
+    "ws": "8.21.0"
+  }
+}

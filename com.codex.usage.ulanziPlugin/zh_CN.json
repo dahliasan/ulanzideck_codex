@@ -1,0 +1,22 @@
+{
+  "Name": "Codex Usage",
+  "Description": "Monitor your ChatGPT Codex subscription usage in real time. Shows the 5-hour rolling limit and the weekly limit directly on your Ulanzi Deck button, with color-coded thresholds and reset countdown. Credentials are read from ~/.codex/auth.json — no API key required.",
+  "Actions": [
+    {
+      "Name": "5-hour Limit",
+      "Tooltip": "Codex 5-hour rolling limit usage."
+    },
+    {
+      "Name": "Weekly Limit",
+      "Tooltip": "Codex weekly usage limit."
+    }
+  ],
+  "Localization": {
+    "colorModeLabel": "Accent color",
+    "colorModeNone": "None",
+    "colorModeCustom": "Custom…",
+    "colorLabel": "Color",
+    "colorHint": "Optional thin stripe across the top of the button.",
+    "authHint": "Reads ~/.codex/auth.json (ChatGPT login). Click the button to force a refresh."
+  }
+}
