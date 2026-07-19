@@ -55,3 +55,9 @@ make test
 make package
 ls -la dist/
 ```
+
+## CI note (this repo)
+
+Automatic release Action is checked in as [`docs/release.yml.example`](docs/release.yml.example).
+To enable it: `gh auth refresh -h github.com -s workflow`, move the file to `.github/workflows/release.yml`, push, then bump `manifest.json` Version on `main`.
+Until then, ship with `make package` + `gh release create`.
