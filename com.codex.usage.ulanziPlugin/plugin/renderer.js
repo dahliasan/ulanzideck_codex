@@ -73,14 +73,16 @@ function codexIcon(centerX, centerY, width) {
 }
 
 function topLabelWithIcon(label, y, fontSize) {
-  const iconHeight = Math.round(fontSize * 0.85);
+  // Codex mark reads small at Claude's pixel-icon scale — bump it so it matches
+  // the visual weight of the label on a 200px deck key.
+  const iconHeight = Math.round(fontSize * 1.35);
   const iconWidth = iconHeight * (CODEX_MARK_VB_W / CODEX_MARK_VB_H);
-  const gap = 10;
+  const gap = 8;
   const textW = label.length * fontSize * 0.58;
   const groupW = iconWidth + gap + textW;
   const startX = (SIZE - groupW) / 2;
   const iconCx = startX + iconWidth / 2;
-  const iconCy = y - fontSize * 0.35;
+  const iconCy = y - fontSize * 0.32;
   const textX = startX + iconWidth + gap;
   return codexIcon(iconCx, iconCy, iconWidth) + textWithShadow(label, textX, y, fontSize, '700', 'start');
 }
